@@ -1,0 +1,48 @@
+randomize()
+global.vida = 3
+global.pontos = 0;
+global.nivel = 1;
+global.tempo = 1;
+global.concluido = 0
+global.timer = 150
+global.crescmento_de_velocidade = 0.5
+global.recorde = 0
+global.summon = 0
+global.pause = 0
+global.bateu_record = 0
+global.pause = 0
+global.tempo_antes  = 0
+global.tela_cheia = 0
+
+
+
+//Variavies de Ajustes
+global.volume_musica = 10;
+global.volume_efeitos = 10;
+
+
+
+//Morrer pelo tempo
+function morte()
+{
+	
+
+	
+	global.tempo = 0
+	obj_frogger.speed = 0
+		audio_play_sound(snd_morte,1,false,0.1*global.volume_efeitos)
+	alarm[0] = 90
+	
+}
+
+
+
+
+function game_over()
+{
+
+audio_stop_sound(snd_musica)
+audio_play_sound(snd_game_over,2,0,1)
+
+}
+
