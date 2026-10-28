@@ -1,4 +1,4 @@
-/// @description reiniciar quando morre ou game
+/// @description reiniciar quando morre ou game over
 // You can write your code in this editor
 
 

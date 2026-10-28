@@ -23,12 +23,12 @@ draw_text_transformed(1200, 40, _str2, 2, 2, 0);
 
 
 
-if(obj_frogger.mostrar_level = 1)
+if(mostrar_level == true)
 {
 draw_set_colour(c_red);
-draw_set_font(fnt_menu_selecionado)
-draw_text(500, 300, "Fase ");
-draw_text(625, 300, global.nivel);
+draw_set_font(fnt_menu_selecionado);
+draw_text(500, 300, "Fase " + string(global.nivel));
+
 }
 
 if(global.vida = 0)

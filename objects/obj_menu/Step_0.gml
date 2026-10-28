@@ -17,7 +17,7 @@ show_debug_message(selecionado)
 
 if(keyboard_check_pressed(vk_right) and selecionado ==0 and room == rm_menu )
 {
-	room_goto(rm_jogo)
+	room_goto(rm_stage_1)
 }
 
 if(keyboard_check_pressed(vk_right) and selecionado ==1 )

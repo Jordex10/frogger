@@ -8,10 +8,12 @@ ini_open("save.sav");
 ini_write_real("pontuacao","recorde",global.recorde)
 ini_close()
 }
+
 }
-if(global.vida = 0 and audio_is_playing(snd_game_over)=0)
+
+if(global.vida = 0 and audio_is_playing(snd_game_over) = 0)
 {
-	room_restart()
+	room_goto(rm_stage_1)
 	global.tempo = 1
 	global.vida = 3
 	global.timer = 120

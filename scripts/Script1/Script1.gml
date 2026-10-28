@@ -30,12 +30,38 @@ function morte()
 	
 	global.tempo = 0
 	obj_frogger.speed = 0
-		audio_play_sound(snd_morte,1,false,0.1*global.volume_efeitos)
+	audio_play_sound(snd_morte,1,false,0.1*global.volume_efeitos)
 	alarm[0] = 90
 	
 }
 
+function chegou(obj_final)
+{
+	obj_control.comecou = 0
+	obj_frogger.image_alpha = 0;
+	//Nem todos estão preenchidos
+	if( global.concluido < 4)
+	{
+	
+		global.concluido += 1
+		global.pontos += 90;
+		
+	
 
+	
+	
+	
+		audio_play_sound(snd_chegou,2,0,3)
+		obj_control.alarm[5] = 90 // Retorna o alvo para a posição de origem
+	}
+		else
+		{audio_stop_all()
+			audio_play_sound(snd_passou_de_nivel,1,0,3,1)
+			obj_control.alarm[6] = 210
+		}
+	
+
+	}	
 
 
 function game_over()

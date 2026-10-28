@@ -1,5 +1,5 @@
 
-obj_jogo.alarm[0] = 2400
+obj_control.alarm[0] = 2400
 global.summon_sapo = 0
 
 audio_play_sound(snd_sapoamarelo,2,0,2)

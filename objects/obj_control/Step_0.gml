@@ -8,7 +8,7 @@ if(global.pontos > global.recorde)
 
 
 
-if(keyboard_check_released(vk_space)and obj_frogger.alarm[0] < 0 and obj_frogger.comecou = 1)
+if(keyboard_check_released(vk_space)and obj_frogger.alarm[0] < 0 and comecou = true)
 {
 if(global.pause = 0)
 {
@@ -20,5 +20,13 @@ else
 global.tempo = 1
 global.pause = 0
 }
+}
+
+
+//Pontos por avançar
+if(obj_frogger.y < posicao)
+{
+	posicao -= 16
+	global.pontos += 10;
 }
 
