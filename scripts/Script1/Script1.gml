@@ -2,12 +2,14 @@ randomize()
 global.vida = 3
 global.pontos = 0;
 global.nivel = 1;
+global.fase = 1;
 global.tempo = 1;
-global.concluido = 0
+global.concluido = 0 
 global.timer = 150
 global.crescmento_de_velocidade = 0.5
 global.recorde = 0
 global.summon = 0
+global.summon_timer = 1800
 global.pause = 0
 global.bateu_record = 0
 global.pause = 0
@@ -45,6 +47,7 @@ function chegou(obj_final)
 	
 		global.concluido += 1
 		global.pontos += 90;
+		global.timer += 5
 		
 	
 
@@ -57,7 +60,9 @@ function chegou(obj_final)
 		else
 		{audio_stop_all()
 			audio_play_sound(snd_passou_de_nivel,1,0,3,1)
+			global.fase ++
 			obj_control.alarm[6] = 210
+			
 		}
 	
 

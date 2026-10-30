@@ -27,7 +27,7 @@ if(mostrar_level == true)
 {
 draw_set_colour(c_red);
 draw_set_font(fnt_menu_selecionado);
-draw_text(500, 300, "Fase " + string(global.nivel));
+draw_text(500, 300, "Fase " + string(global.fase));
 
 }
 

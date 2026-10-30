@@ -101,7 +101,7 @@ morte()
 }
 
 //Ficando seguro quando em cima da tartaruga
-if(instance_place(x,y,obj_tartaruga) and obj_tartaruga.image_index < 13)
+if(instance_place(x,y,obj_tartaruga) and obj_tartaruga.image_index < 16)
 {
 	seguro = 1
 }

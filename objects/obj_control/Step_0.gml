@@ -7,7 +7,7 @@ if(global.pontos > global.recorde)
 #endregion
 
 
-
+global.summon++
 if(keyboard_check_released(vk_space)and obj_frogger.alarm[0] < 0 and comecou = true)
 {
 if(global.pause = 0)
