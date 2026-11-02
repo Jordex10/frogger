@@ -23,10 +23,3 @@ global.pause = 0
 }
 
 
-//Pontos por avançar
-if(obj_frogger.y < posicao)
-{
-	posicao -= 16
-	global.pontos += 10;
-}
-

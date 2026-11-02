@@ -1,5 +1,5 @@
-var target_x = obj_frogger.x - 48
-var target_y = obj_frogger.y -48
+var target_x = obj_frogger.x - 80
+var target_y = obj_frogger.y - 48
 
 // Suaviza o movimento da câmera
 var smooth_factor = 0.5;

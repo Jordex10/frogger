@@ -47,6 +47,7 @@ function chegou(obj_final)
 	
 		global.concluido += 1
 		global.pontos += 90;
+		number_score(90,obj_frogger)
 		global.timer += 5
 		
 	

@@ -15,9 +15,5 @@ if(cor == 1)
 	global.timer +=20;
 }
 
-if(cor == 2)
-{
-	global.pontos += 70;
-}
 
 instance_destroy(self)

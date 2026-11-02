@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.552834,
+  "duration":0.55283445,
   "exportDir":"",
   "name":"snd_sapoamarelo",
   "parent":{

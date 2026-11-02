@@ -2,10 +2,10 @@ draw_set_halign(fa_left);
 
 draw_set_colour(c_yellow);
 
-draw_set_font(fnt_2)
+draw_set_font(fnt_menu)
 
 draw_text(28, y+16, "Pontos");
-draw_text(1200, y+16, "Recorde");
+draw_text(1100, y+16, "Recorde");
 
 draw_text(700, y+16, global.timer);
 
@@ -19,7 +19,7 @@ draw_text_transformed(28, 40, _str, 2, 2, 0);
 var _str2 = string(global.recorde);
 
 
-draw_text_transformed(1200, 40, _str2, 2, 2, 0);
+draw_text_transformed(1100, 40, _str2, 2, 2, 0);
 
 
 
@@ -45,3 +45,6 @@ if(global.pause = 1)
 {
 	draw_text(x+400,y+200,"Jogo Pausado")
 }
+
+draw_set_font(-1)
+

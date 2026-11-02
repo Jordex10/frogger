@@ -7,11 +7,7 @@ hspeed = global.tempo*velocidade*(global.nivel*global.crescmento_de_velocidade)
 
 //Definindo a cor
 
-if( velocidade > 0)
-{
-	image_blend = c_aqua
-	image_angle = 180;
-}
+
 
 // Fazendo voltar para o começo
 if(x > room_width + 8 and velocidade > 0)
