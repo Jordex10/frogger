@@ -65,7 +65,7 @@ if (instance_place(x,y,obj_tronco)and image_xscale == 1)
 
 #endregion
 //Morrer pelo tempo
-if(global.timer == 0 and global.tempo = 1)
+if(global.timer == 0 and global.tempo = 1 and obj_control.comecou == 1 and image_alpha == 1 )
 {
 
 global.vida = -1

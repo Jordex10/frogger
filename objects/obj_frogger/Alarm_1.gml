@@ -21,7 +21,7 @@ number_score(100, obj_frogger)
 global.pontos += 100
 }
 
-if( place_meeting(x,y,obj_frogger))
+if( place_meeting(x,y,obj_frogger_1))
 
 {
 	var _sapo = instance_place(x,y,obj_frogger_1)
@@ -29,8 +29,11 @@ if( place_meeting(x,y,obj_frogger))
 	if(_sapo.cor == 2)
 	{
 		
-		number_score(100, obj_frogger)
+		number_score(70, obj_frogger)
 		global.pontos += 70
+		instance_destroy(_sapo)
+		audio_play_sound(snd_sapoamarelo,2,0,2)
+	
 	}
 }
 

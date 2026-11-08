@@ -4,19 +4,19 @@ global.pontos = 0;
 global.nivel = 1;
 global.fase = 1;
 global.tempo = 1;
-global.concluido = 0 
-global.timer = 150
+global.concluido = 0
+global.timer = 90
 global.crescmento_de_velocidade = 0.5
 global.recorde = 0
 global.summon = 0
-global.summon_timer = 1800
+global.summon_timer = 1600
 global.pause = 0
 global.bateu_record = 0
 global.pause = 0
 global.tempo_antes  = 0
 global.tela_cheia = 0
-
-
+global.mostrar_tempo = 0
+global.tempo_soma = 0
 
 //Variavies de Ajustes
 global.volume_musica = 10;
@@ -45,10 +45,11 @@ function chegou(obj_final)
 	if( global.concluido < 4)
 	{
 	
+	
 		global.concluido += 1
 		global.pontos += 90;
 		number_score(90,obj_frogger)
-		global.timer += 5
+	
 		
 	
 
@@ -62,8 +63,10 @@ function chegou(obj_final)
 		{audio_stop_all()
 			audio_play_sound(snd_passou_de_nivel,1,0,3,1)
 			global.fase ++
-			obj_control.alarm[6] = 210
+			global.pontos += 90
 			
+			obj_control.alarm[6] = 90
+				
 		}
 	
 

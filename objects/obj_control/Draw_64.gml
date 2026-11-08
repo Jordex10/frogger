@@ -43,7 +43,16 @@ if(global.vida = 0)
 draw_set_font(fnt_3)
 if(global.pause = 1)
 {
-	draw_text(x+400,y+200,"Jogo Pausado")
+	draw_text(x+400,y+200,"Jogo Pausado");
+}
+
+if(global.mostrar_tempo > 0)
+{
+	draw_set_font(fnt_menu)
+	draw_set_colour(c_yellow)
+	
+	draw_set_halign(fa_right)
+	draw_text(765,50,"+" + string (global.tempo_soma))
 }
 
 draw_set_font(-1)

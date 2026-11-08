@@ -23,3 +23,5 @@ global.pause = 0
 }
 
 
+if( global.mostrar_tempo >= 0)
+global.mostrar_tempo --
