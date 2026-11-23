@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":3.672,
+  "duration":3.672018,
   "exportDir":"",
   "name":"snd_game_over",
   "parent":{

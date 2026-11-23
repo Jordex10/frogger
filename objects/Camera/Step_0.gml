@@ -2,11 +2,11 @@ var target_x = obj_frogger.x - 80
 var target_y = obj_frogger.y - 48
 
 // Suaviza o movimento da câmera
-var smooth_factor = 0.5;
+var smooth_factor = 0.05;
 
 
 var new_x = lerp(camera_get_view_x(view_camera[0]), target_x, smooth_factor);
-var new_y = lerp(camera_get_view_y(view_camera[0]), target_y, smooth_factor/10);
+var new_y = lerp(camera_get_view_y(view_camera[0]), target_y, smooth_factor);
 
 x = new_x
 y = new_y

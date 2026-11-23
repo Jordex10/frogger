@@ -16,7 +16,7 @@ if(global.vida = 0 and audio_is_playing(snd_game_over) = 0)
 	room_goto(rm_stage_1)
 	global.tempo = 1
 	global.vida = 3
-	global.timer = 120
+	global.timer = 90
 	global.pontos = 0
 	global.concluido = 0
 	global.bateu_record = 0

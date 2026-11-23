@@ -32,7 +32,7 @@ if( place_meeting(x,y,obj_frogger_1))
 		number_score(70, obj_frogger)
 		global.pontos += 70
 		instance_destroy(_sapo)
-		audio_play_sound(snd_sapoamarelo,2,0,2)
+		audio_play_sound(snd_sapoamarelo,2,0,global.volume_efeitos/10)
 	
 	}
 }

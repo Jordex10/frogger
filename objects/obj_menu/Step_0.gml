@@ -11,6 +11,24 @@ selecionado = 0
 alarm[0] = 3
 }
 
+
+if(keyboard_check_pressed(vk_up) and selecionado = 1 and alarm[0] < 3){
+
+selecionado = 0
+alarm[0] = 3
+}
+
+if(keyboard_check_pressed(vk_up) and selecionado = 0 and alarm[0] < 3){
+
+selecionado = 1
+alarm[0] = 3
+}
+
+
+
+
+
+
 show_debug_message(selecionado)
 
 
@@ -23,6 +41,7 @@ if(keyboard_check_pressed(vk_right) and selecionado ==0 and room == rm_menu )
 if(keyboard_check_pressed(vk_right) and selecionado ==1 )
 {
 	selecionado = 2;
+	alarm[0] = 3
 }
 if(keyboard_check_pressed(vk_escape) and selecionado >1)
 {
@@ -47,12 +66,12 @@ if(keyboard_check_pressed(vk_left)and selecionado = 0  and global.volume_musica 
 if(keyboard_check_pressed(vk_right)and selecionado == 3 and alarm[0] <= 1 and global.volume_efeitos < 10)
 {
 	global.volume_efeitos++
-audio_play_sound(snd_jump,1,0,0.1*global.volume_efeitos)
+audio_play_sound(snd_jump,1,0,global.volume_efeitos/10)
 }
 if(keyboard_check_pressed(vk_left)and selecionado == 3 and global.volume_efeitos > 0)
 {
 	global.volume_efeitos--
-	audio_play_sound(snd_jump,1,0,0.1*global.volume_efeitos)
+	audio_play_sound(snd_jump,1,0,global.volume_efeitos/10)
 } 
 
 if(keyboard_check_pressed(vk_right)and selecionado == 2 and alarm[0] <= 1 and global.volume_musica < 10)

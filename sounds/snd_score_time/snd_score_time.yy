@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.23936509,
+  "duration":0.2211111,
   "exportDir":"",
   "name":"snd_score_time",
   "parent":{

@@ -14,12 +14,12 @@ draw_set_colour(c_white);
 var _str = string(global.pontos);
 
 
-draw_text_transformed(28, 40, _str, 2, 2, 0);
+draw_text_transformed(28, 40, _str, 1.5, 1.5, 0);
 
 var _str2 = string(global.recorde);
 
 
-draw_text_transformed(1100, 40, _str2, 2, 2, 0);
+draw_text_transformed(1100, 40, _str2, 1.5, 1.5, 0);
 
 
 

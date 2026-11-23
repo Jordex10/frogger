@@ -1,4 +1,7 @@
 #region escolhendo o menu no jogo
+if(global.pause == 0)
+exit
+
 
 if(keyboard_check_pressed(vk_down) and selecionado < 3)
 {
@@ -78,7 +81,7 @@ if(keyboard_check_pressed(vk_right) and selecionado ==0 and global.pause = 1 )
 // Reiniciar
 if(keyboard_check_pressed(vk_right) and selecionado == 1 and global.pause = 1 )
 {
-	audio_stop_sound(snd_musica)
+	audio_stop_sound(global.musica_id)
 	room_restart()
 	global.pause = 0
 	global.tempo =	1
@@ -103,14 +106,14 @@ if(keyboard_check_pressed(vk_right) and selecionado == 2 and global.pause = 1 )
 if(keyboard_check_pressed(vk_right)and selecionado == 4 and alarm[0] <= 1 and global.volume_musica < 10)
 {
 	global.volume_musica++
-audio_sound_gain(global.musica_id,global.volume_musica*0.1,0)
+
 }
 
 //Diminuindo o volume da musica
 if(keyboard_check_pressed(vk_left)and selecionado == 4 and global.volume_musica > 0)
 {
 	global.volume_musica--
-audio_sound_gain(global.musica_id,global.volume_musica*0.1,0)
+
 	
 } 
 
@@ -125,14 +128,14 @@ audio_sound_gain(global.musica_id,global.volume_musica*0.1,0)
 if(keyboard_check_pressed(vk_right)and selecionado == 5 and alarm[0] <= 1 and global.volume_efeitos < 10)
 {
 	global.volume_efeitos++
-audio_play_sound(snd_jump,1,0,0.1*global.volume_efeitos)
+audio_play_sound(snd_jump,1,0,global.volume_efeitos/10)
 }
 
 //Diminuindo o volume dos Efeitos
 if(keyboard_check_pressed(vk_left)and selecionado == 5 and global.volume_efeitos > 0)
 {
 	global.volume_efeitos--
-	audio_play_sound(snd_jump,1,0,0.1*global.volume_efeitos)
+	audio_play_sound(snd_jump,1,0,global.volume_efeitos/10)
 } 
 
 if(keyboard_check_pressed(vk_escape) and selecionado > 3)

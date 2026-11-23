@@ -13,7 +13,7 @@ if ((keyboard_check_released(ord("W")) or keyboard_check_released(vk_up)))
 	obj_frogger.image_xscale = 1.25
 	obj_frogger.image_yscale = 1.25
 	obj_frogger.image_angle = 0
-audio_play_sound(snd_jump,1,0,0.1*global.volume_efeitos,0,random_range(0.9,1.25))
+audio_play_sound(snd_jump,1,0,global.volume_efeitos/10,0,random_range(0.9,1.25))
 }
 if ((keyboard_check_released(ord("S")) or keyboard_check_released(vk_down))  && y < 210)
 { 
@@ -24,7 +24,7 @@ if ((keyboard_check_released(ord("S")) or keyboard_check_released(vk_down))  && 
 	obj_frogger.image_xscale = 1.25;
 	obj_frogger.image_yscale = 1.25;
 	obj_frogger.image_angle = 180;
-	audio_play_sound(snd_jump,1,0,0.1*global.volume_efeitos,0,random_range(0.9,1.25))
+	audio_play_sound(snd_jump,1,0,global.volume_efeitos/10,0,random_range(0.9,1.25))
 } 
 if (obj_menu_1.alarm[0] < 2 and (keyboard_check_released(ord("A")) or keyboard_check_released(vk_left)))
 { 
@@ -35,7 +35,7 @@ if (obj_menu_1.alarm[0] < 2 and (keyboard_check_released(ord("A")) or keyboard_c
 	obj_frogger.image_angle = 90;
 	obj_frogger.image_xscale = 1.25;
 	obj_frogger.image_yscale = 1.25;
-	audio_play_sound(snd_jump,1,0,0.1*global.volume_efeitos,0,random_range(0.9,1.25))
+	audio_play_sound(snd_jump,1,0,global.volume_efeitos/10,0,random_range(0.9,1.25))
 	
 }
 if ((keyboard_check_released(ord("D")) or keyboard_check_released(vk_right)))
@@ -46,7 +46,7 @@ if ((keyboard_check_released(ord("D")) or keyboard_check_released(vk_right)))
 	obj_frogger.image_angle = 270
 	obj_frogger.image_xscale = 1.25
 	obj_frogger.image_yscale = 1.25
-	audio_play_sound(snd_jump,1,0,0.1*global.volume_efeitos,0,random_range(0.9,1.25))
+	audio_play_sound(snd_jump,1,0,global.volume_efeitos/10,0,random_range(0.9,1.25))
 }
 
 }
@@ -95,7 +95,7 @@ if(( x > room_width + 4 or x < 0 - 4 or y > room_height +4 or y < 0 -4) and glob
 //Morte Pela água
 if(instance_place(x,y,obj_agua) and image_xscale =1 and seguro = 0 and global.tempo = 1)
 {
-morte()	
+	morte()	
 
 
 }

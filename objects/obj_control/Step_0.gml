@@ -14,9 +14,11 @@ if(global.pause = 0)
 {
 global.tempo = 0	
 global.pause = 1
+
 }
 else
 {
+
 global.tempo = 1
 global.pause = 0
 }

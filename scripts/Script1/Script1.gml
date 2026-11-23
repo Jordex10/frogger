@@ -19,8 +19,8 @@ global.mostrar_tempo = 0
 global.tempo_soma = 0
 
 //Variavies de Ajustes
-global.volume_musica = 10;
-global.volume_efeitos = 10;
+global.volume_musica = 5;
+global.volume_efeitos = 5;
 
 
 
@@ -32,7 +32,7 @@ function morte()
 	
 	global.tempo = 0
 	obj_frogger.speed = 0
-	audio_play_sound(snd_morte,1,false,0.1*global.volume_efeitos)
+	audio_play_sound(snd_morte,1,false, global.volume_efeitos/10)
 	alarm[0] = 90
 	
 }
@@ -56,12 +56,12 @@ function chegou(obj_final)
 	
 	
 	
-		audio_play_sound(snd_chegou,2,0,3)
+		audio_play_sound(snd_chegou,2,0,global.volume_efeitos/10)
 		obj_control.alarm[5] = 90 // Retorna o alvo para a posição de origem
 	}
 		else
 		{audio_stop_all()
-			audio_play_sound(snd_passou_de_nivel,1,0,3,1)
+			audio_play_sound(snd_passou_de_nivel,1,0,global.volume_efeitos/10,1)
 			global.fase ++
 			global.pontos += 90
 			
@@ -76,8 +76,7 @@ function chegou(obj_final)
 function game_over()
 {
 
-audio_stop_sound(snd_musica)
-audio_play_sound(snd_game_over,2,0,1)
-
+audio_stop_sound(global.musica_id)
+audio_play_sound(snd_game_over,2,0,global.volume_efeitos/10)
 }
 

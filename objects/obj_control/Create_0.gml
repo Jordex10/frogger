@@ -17,6 +17,6 @@ if(file_exists("save.sav"))
 
 }
 
- global.musica_id = audio_play_sound(snd_musica,1,true)
-audio_sound_gain(global.musica_id,global.volume_musica*0.1,0)
+
+
 alarm[3] = 60
